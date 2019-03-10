@@ -1,0 +1,20 @@
+version: '2'
+services:
+    koupona-app:
+        image: koupona
+        environment:
+            - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://koupona-postgresql:5432/koupona
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_JEST_URI=http://koupona-elasticsearch:9200
+        ports:
+            - 8080:8080
+    koupona-postgresql:
+        extends:
+            file: postgresql.yml
+            service: koupona-postgresql
+    koupona-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: koupona-elasticsearch
