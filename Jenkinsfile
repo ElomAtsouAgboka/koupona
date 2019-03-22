@@ -43,7 +43,7 @@ node {
     }
 
     stage('protractor tests') {
-        sh "./mvnw & bootPid=$! sleep 60s npm run e2e kill $bootPid"
+        sh "./mvnw & npm run e2e"
     }
 
     stage('package and deploy') {
