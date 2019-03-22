@@ -42,6 +42,10 @@ node {
         }
     }
 
+    stage('protractor tests') {
+        sh "./mvnw & bootPid=$! sleep 60s npm run e2e kill $bootPid"
+    }
+
     stage('package and deploy') {
         sh "./mvnw com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=koupona"
         archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
