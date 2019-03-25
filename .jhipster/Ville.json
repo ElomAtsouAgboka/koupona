@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "pays",
+            "otherEntityName": "pays",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nomPays",
+            "otherEntityRelationshipNameUndefined": true,
+            "otherEntityRelationshipName": "ville"
+        },
+        {
+            "relationshipName": "quartier",
+            "otherEntityName": "quartier",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "ville",
+            "otherEntityRelationshipNameUndefined": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nomVille",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20190323193537",
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "no",
+    "entityTableName": "ville",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

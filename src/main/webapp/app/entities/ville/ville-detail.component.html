@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="ville">
+            <h2><span jhiTranslate="kouponaApp.ville.detail.title">Ville</span> {{ville.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="kouponaApp.ville.nomVille">Nom Ville</span></dt>
+                <dd>
+                    <span>{{ville.nomVille}}</span>
+                </dd>
+                <dt><span jhiTranslate="kouponaApp.ville.pays">Pays</span></dt>
+                <dd>
+                    <div *ngIf="ville.pays">
+                        <a [routerLink]="['/pays', ville.pays?.id, 'view']">{{ville.pays?.nomPays}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ville', ville.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

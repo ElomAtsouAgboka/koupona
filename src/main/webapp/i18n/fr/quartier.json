@@ -1,0 +1,23 @@
+{
+    "kouponaApp": {
+        "quartier": {
+            "home": {
+                "title": "Quartiers",
+                "createLabel": "Créer un nouveau Quartier",
+                "createOrEditLabel": "Créer ou éditer un Quartier",
+                "search": "Recherche pour Quartier"
+            },
+            "created": "Un nouveau Quartier a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Quartier avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Quartier avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Quartier {{ id }} ?"
+            },
+            "detail": {
+                "title": "Quartier"
+            },
+            "nomQuartier": "Nom Quartier",
+            "ville": "Ville"
+        }
+    }
+}
