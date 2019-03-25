@@ -43,6 +43,9 @@ public class CacheConfiguration {
             cm.createCache(tg.opentechconsult.koupona.domain.Ville.class.getName(), jcacheConfiguration);
             cm.createCache(tg.opentechconsult.koupona.domain.Ville.class.getName() + ".quartiers", jcacheConfiguration);
             cm.createCache(tg.opentechconsult.koupona.domain.Quartier.class.getName(), jcacheConfiguration);
+            cm.createCache(tg.opentechconsult.koupona.domain.Topcategorie.class.getName(), jcacheConfiguration);
+            cm.createCache(tg.opentechconsult.koupona.domain.Topcategorie.class.getName() + ".categories", jcacheConfiguration);
+            cm.createCache(tg.opentechconsult.koupona.domain.Categorie.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

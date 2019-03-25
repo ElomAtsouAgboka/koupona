@@ -1,0 +1,23 @@
+{
+    "kouponaApp": {
+        "topcategorie": {
+            "home": {
+                "title": "Topcategories",
+                "createLabel": "Create a new Topcategorie",
+                "createOrEditLabel": "Create or edit a Topcategorie",
+                "search": "Search for Topcategorie"
+            },
+            "created": "A new Topcategorie is created with identifier {{ param }}",
+            "updated": "A Topcategorie is updated with identifier {{ param }}",
+            "deleted": "A Topcategorie is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Topcategorie {{ id }}?"
+            },
+            "detail": {
+                "title": "Topcategorie"
+            },
+            "nomTopCategorie": "Nom Top Categorie",
+            "categorie": "Categorie"
+        }
+    }
+}

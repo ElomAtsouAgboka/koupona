@@ -1,0 +1,23 @@
+{
+    "kouponaApp": {
+        "topcategorie": {
+            "home": {
+                "title": "Topcategories",
+                "createLabel": "Créer un nouveau Topcategorie",
+                "createOrEditLabel": "Créer ou éditer un Topcategorie",
+                "search": "Recherche pour Topcategorie"
+            },
+            "created": "Un nouveau Topcategorie a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Topcategorie avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Topcategorie avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Topcategorie {{ id }} ?"
+            },
+            "detail": {
+                "title": "Topcategorie"
+            },
+            "nomTopCategorie": "Nom Top Categorie",
+            "categorie": "Categorie"
+        }
+    }
+}
