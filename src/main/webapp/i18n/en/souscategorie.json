@@ -1,0 +1,23 @@
+{
+    "kouponaApp": {
+        "souscategorie": {
+            "home": {
+                "title": "Souscategories",
+                "createLabel": "Create a new Souscategorie",
+                "createOrEditLabel": "Create or edit a Souscategorie",
+                "search": "Search for Souscategorie"
+            },
+            "created": "A new Souscategorie is created with identifier {{ param }}",
+            "updated": "A Souscategorie is updated with identifier {{ param }}",
+            "deleted": "A Souscategorie is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Souscategorie {{ id }}?"
+            },
+            "detail": {
+                "title": "Souscategorie"
+            },
+            "nomSousCategorie": "Nom Sous Categorie",
+            "categorie": "Categorie"
+        }
+    }
+}

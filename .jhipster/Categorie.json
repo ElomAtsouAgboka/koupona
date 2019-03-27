@@ -6,7 +6,16 @@
             "relationshipName": "topcategorie",
             "otherEntityName": "topcategorie",
             "relationshipType": "many-to-one",
-            "otherEntityField": "nomTopCategorie"
+            "otherEntityField": "nomTopCategorie",
+            "otherEntityRelationshipNameUndefined": true,
+            "otherEntityRelationshipName": "categorie"
+        },
+        {
+            "relationshipName": "souscategorie",
+            "otherEntityName": "souscategorie",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "categorie",
+            "otherEntityRelationshipNameUndefined": false
         }
     ],
     "fields": [

@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-souscategorie-heading" jhiTranslate="kouponaApp.souscategorie.home.createOrEditLabel">Create or edit a Souscategorie</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!souscategorie.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="souscategorie.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kouponaApp.souscategorie.nomSousCategorie" for="field_nomSousCategorie">Nom Sous Categorie</label>
+                    <input type="text" class="form-control" name="nomSousCategorie" id="field_nomSousCategorie"
+                        [(ngModel)]="souscategorie.nomSousCategorie" required/>
+                    <div [hidden]="!(editForm.controls.nomSousCategorie?.dirty && editForm.controls.nomSousCategorie?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nomSousCategorie?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kouponaApp.souscategorie.categorie" for="field_categorie">Categorie</label>
+                    <select class="form-control" id="field_categorie" name="categorie" [(ngModel)]="souscategorie.categorie" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="categorieOption.id === souscategorie.categorie?.id ? souscategorie.categorie : categorieOption" *ngFor="let categorieOption of categories; trackBy: trackCategorieById">{{categorieOption.nomCategorie}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

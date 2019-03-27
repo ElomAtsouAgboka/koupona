@@ -17,7 +17,8 @@
                 "title": "Categorie"
             },
             "nomCategorie": "Nom Categorie",
-            "topcategorie": "Topcategorie"
+            "topcategorie": "Topcategorie",
+            "souscategorie": "Souscategorie"
         }
     }
 }

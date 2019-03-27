@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "categorie",
+            "otherEntityName": "categorie",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nomCategorie"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nomSousCategorie",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20190326161034",
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "no",
+    "entityTableName": "souscategorie",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

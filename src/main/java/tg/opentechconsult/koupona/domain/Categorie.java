@@ -1,6 +1,7 @@
 package tg.opentechconsult.koupona.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -10,6 +11,8 @@ import javax.validation.constraints.*;
 
 import org.springframework.data.elasticsearch.annotations.Document;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -33,8 +36,12 @@ public class Categorie implements Serializable {
     private String nomCategorie;
 
     @ManyToOne
+    @JsonIgnoreProperties("categories")
     private Topcategorie topcategorie;
 
+    @OneToMany(mappedBy = "categorie")
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Souscategorie> souscategories = new HashSet<>();
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -68,6 +75,31 @@ public class Categorie implements Serializable {
 
     public void setTopcategorie(Topcategorie topcategorie) {
         this.topcategorie = topcategorie;
+    }
+
+    public Set<Souscategorie> getSouscategories() {
+        return souscategories;
+    }
+
+    public Categorie souscategories(Set<Souscategorie> souscategories) {
+        this.souscategories = souscategories;
+        return this;
+    }
+
+    public Categorie addSouscategorie(Souscategorie souscategorie) {
+        this.souscategories.add(souscategorie);
+        souscategorie.setCategorie(this);
+        return this;
+    }
+
+    public Categorie removeSouscategorie(Souscategorie souscategorie) {
+        this.souscategories.remove(souscategorie);
+        souscategorie.setCategorie(null);
+        return this;
+    }
+
+    public void setSouscategories(Set<Souscategorie> souscategories) {
+        this.souscategories = souscategories;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

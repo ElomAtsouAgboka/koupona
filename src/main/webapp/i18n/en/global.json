@@ -12,6 +12,7 @@
                 "quartier": "Quartier",
                 "topcategorie": "Topcategorie",
                 "categorie": "Categorie",
+                "souscategorie": "Souscategorie",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
