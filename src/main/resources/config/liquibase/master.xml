@@ -11,10 +11,13 @@
     <include file="config/liquibase/changelog/20190325134319_added_entity_Topcategorie.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190325135312_added_entity_Categorie.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190326161034_added_entity_Souscategorie.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327100747_added_entity_Menu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327102043_added_entity_Sousmenu.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20190323193537_added_entity_constraints_Ville.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190325032303_added_entity_constraints_Quartier.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190325135312_added_entity_constraints_Categorie.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190326161034_added_entity_constraints_Souscategorie.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190327102043_added_entity_constraints_Sousmenu.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -35,6 +35,14 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'souscategorie',
                 loadChildren: './souscategorie/souscategorie.module#KouponaSouscategorieModule'
+            },
+            {
+                path: 'menu',
+                loadChildren: './menu/menu.module#KouponaMenuModule'
+            },
+            {
+                path: 'sousmenu',
+                loadChildren: './sousmenu/sousmenu.module#KouponaSousmenuModule'
             }
             /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
         ])

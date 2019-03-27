@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sousmenu">
+            <h2><span jhiTranslate="kouponaApp.sousmenu.detail.title">Sousmenu</span> {{sousmenu.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="kouponaApp.sousmenu.sousMenuItem">Sous Menu Item</span></dt>
+                <dd>
+                    <span>{{sousmenu.sousMenuItem}}</span>
+                </dd>
+                <dt><span jhiTranslate="kouponaApp.sousmenu.sousMenuItemImg">Sous Menu Item Img</span></dt>
+                <dd>
+                    <span>{{sousmenu.sousMenuItemImg}}</span>
+                </dd>
+                <dt><span jhiTranslate="kouponaApp.sousmenu.menu">Menu</span></dt>
+                <dd>
+                    <div *ngIf="sousmenu.menu">
+                        <a [routerLink]="['/menu', sousmenu.menu?.id, 'view']">{{sousmenu.menu?.menuItem}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sousmenu', sousmenu.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

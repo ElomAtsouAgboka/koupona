@@ -1,0 +1,24 @@
+{
+    "kouponaApp": {
+        "sousmenu": {
+            "home": {
+                "title": "Sousmenus",
+                "createLabel": "Create a new Sousmenu",
+                "createOrEditLabel": "Create or edit a Sousmenu",
+                "search": "Search for Sousmenu"
+            },
+            "created": "A new Sousmenu is created with identifier {{ param }}",
+            "updated": "A Sousmenu is updated with identifier {{ param }}",
+            "deleted": "A Sousmenu is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sousmenu {{ id }}?"
+            },
+            "detail": {
+                "title": "Sousmenu"
+            },
+            "sousMenuItem": "Sous Menu Item",
+            "sousMenuItemImg": "Sous Menu Item Img",
+            "menu": "Menu"
+        }
+    }
+}
