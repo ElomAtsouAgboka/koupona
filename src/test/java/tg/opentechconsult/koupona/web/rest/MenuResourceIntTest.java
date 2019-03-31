@@ -291,18 +291,8 @@ public class MenuResourceIntTest {
     public void searchMenu() throws Exception {
         // Initialize the database
         menuRepository.saveAndFlush(menu);
-<<<<<<< HEAD
-        when(mockMenuSearchRepository.search(queryStringQuery("id:" + menu.getId()), PageRequest.of(0, 20)))
             .thenReturn(new PageImpl<>(Collections.singletonList(menu), PageRequest.of(0, 1), 1));
-=======
-        when(mockMenuSearchRepository.search(queryStringQuery("id:" + menu.getId())))
-            .thenReturn(Collections.singletonList(menu));
->>>>>>> 9e183b5838603b45f77fabada0d4c93fe41026f7
         // Search the menu
-        restMenuMockMvc.perform(get("/api/_search/menus?query=id:" + menu.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-            .andExpect(jsonPath("$.[*].id").value(hasItem(menu.getId().intValue())))
             .andExpect(jsonPath("$.[*].menuItem").value(hasItem(DEFAULT_MENU_ITEM)))
             .andExpect(jsonPath("$.[*].menuItemImg").value(hasItem(DEFAULT_MENU_ITEM_IMG)));
     }
