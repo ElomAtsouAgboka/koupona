@@ -289,12 +289,26 @@ public class MenuResourceIntTest {
     @Test
     @Transactional
     public void searchMenu() throws Exception {
+        /*
         // Initialize the database
         menuRepository.saveAndFlush(menu);
             .thenReturn(new PageImpl<>(Collections.singletonList(menu), PageRequest.of(0, 1), 1));
         // Search the menu
             .andExpect(jsonPath("$.[*].menuItem").value(hasItem(DEFAULT_MENU_ITEM)))
             .andExpect(jsonPath("$.[*].menuItemImg").value(hasItem(DEFAULT_MENU_ITEM_IMG)));
+        */
+
+        // Initialize the database
+        menuRepository.saveAndFlush(menu);
+        when(mockMenuSearchRepository.search(queryStringQuery("id:" + menu.getId()), PageRequest.of(0, 20)))
+        .thenReturn(new PageImpl<>(Collections.singletonList(menu), PageRequest.of(0, 1), 1));
+        // Search the menu
+        restMenuMockMvc.perform(get("/api/_search/menu?query=id:" + menu.getId()))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+        .andExpect(jsonPath("$.[*].id").value(hasItem(menu.getId().intValue())))
+        .andExpect(jsonPath("$.[*].menuItem").value(hasItem(DEFAULT_MENU_ITEM)))
+        .andExpect(jsonPath("$.[*].menuItemImg").value(hasItem(DEFAULT_MENU_ITEM_IMG)));
     }
 
     @Test
