@@ -48,6 +48,9 @@ public class CacheConfiguration {
             cm.createCache(tg.opentechconsult.koupona.domain.Categorie.class.getName(), jcacheConfiguration);
             cm.createCache(tg.opentechconsult.koupona.domain.Categorie.class.getName() + ".souscategories", jcacheConfiguration);
             cm.createCache(tg.opentechconsult.koupona.domain.Souscategorie.class.getName(), jcacheConfiguration);
+            cm.createCache(tg.opentechconsult.koupona.domain.Menu.class.getName(), jcacheConfiguration);
+            cm.createCache(tg.opentechconsult.koupona.domain.Menu.class.getName() + ".sousmenus", jcacheConfiguration);
+            cm.createCache(tg.opentechconsult.koupona.domain.Sousmenu.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

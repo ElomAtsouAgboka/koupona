@@ -1,0 +1,24 @@
+{
+    "kouponaApp": {
+        "menu": {
+            "home": {
+                "title": "Menus",
+                "createLabel": "Créer un nouveau Menu",
+                "createOrEditLabel": "Créer ou éditer un Menu",
+                "search": "Recherche pour Menu"
+            },
+            "created": "Un nouveau Menu a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Menu avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Menu avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Menu {{ id }} ?"
+            },
+            "detail": {
+                "title": "Menu"
+            },
+            "menuItem": "Menu Item",
+            "menuItemImg": "Menu Item Img",
+            "sousmenu": "Sousmenu"
+        }
+    }
+}

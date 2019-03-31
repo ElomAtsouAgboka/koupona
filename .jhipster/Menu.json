@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "sousmenu",
+            "otherEntityName": "sousmenu",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "menu"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "menuItem",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "menuItemImg",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20190329155334",
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "no",
+    "entityTableName": "menu",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
