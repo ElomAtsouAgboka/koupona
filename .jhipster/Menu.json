@@ -22,12 +22,12 @@
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20190329155334",
+    "changelogDate": "20190327100747",
     "dto": "no",
     "searchEngine": "elasticsearch",
     "service": "no",
     "entityTableName": "menu",
     "databaseType": "sql",
     "jpaMetamodelFiltering": false,
-    "pagination": "pagination"
+    "pagination": "no"
 }
